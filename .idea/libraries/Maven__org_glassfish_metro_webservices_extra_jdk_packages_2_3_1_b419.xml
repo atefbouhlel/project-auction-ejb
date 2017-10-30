@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.glassfish.metro:webservices-extra-jdk-packages:2.3.1-b419">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/metro/webservices-extra-jdk-packages/2.3.1-b419/webservices-extra-jdk-packages-2.3.1-b419.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/metro/webservices-extra-jdk-packages/2.3.1-b419/webservices-extra-jdk-packages-2.3.1-b419-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/metro/webservices-extra-jdk-packages/2.3.1-b419/webservices-extra-jdk-packages-2.3.1-b419-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

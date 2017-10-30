@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="project-auction-entity" />
+    <orderEntry type="module" module-name="project-auction-api" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax:javaee-api:7.0" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.5.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.appclient:gf-client:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.appclient:gf-client-module:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.hk2:core:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-locator:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.hk2.external:javax.inject:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.hk2.external:aopalliance-repackaged:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-api:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.javassist:javassist:3.18.1-GA" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-utils:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.common:common-util:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.ejb:ejb-full-container:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.ejb:ejb-container:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.common:stats77:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.external:asm-all:3.3" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.common:container-common:4.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.common:internal-api:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.admin:config-api:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.admin:admin-util:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.security:security-services:4.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.3.2" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.3.2" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.3.2" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.security:security:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.security:ssl-impl:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.external:ldapbp-repackaged:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.connectors:connectors-internal-api:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.ha:ha-api:3.1.8" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.deployment:dol:4.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.transaction:javax.transaction-api:1.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.enterprise.deploy:javax.enterprise.deploy-api:1.6" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.persistence:javax.persistence:2.1.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.resource:javax.resource-api:1.7" level="project" />
+    <orderEntry type="library" name="Maven: javax.ejb:javax.ejb-api:3.2" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.deployment:deployment-common:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.common:annotation-framework:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.security:appclient.security:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.security:security-ee:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.common:glassfish-ee-api:4.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.security.jacc:javax.security.jacc-api:1.5" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.security:jaspic.provider.framework:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.external:libpam4j-repackaged:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.security:ejb.security:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.common:glassfish-api:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.common:scattered-archive-api:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.hk2:config-types:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-config:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.jvnet:tiger-types:1.4" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.hk2.external:bean-validator:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-runlevel:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.hk2:class-model:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.hk2.external:asm-all-repackaged:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.grizzly:nucleus-grizzly-all:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.grizzly:grizzly-portunif:2.3.15-gfa" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.grizzly:grizzly-http:2.3.15-gfa" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.grizzly:grizzly-http-server:2.3.15-gfa" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.grizzly:grizzly-config:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.external:management-api:3.2.1-b002" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.security:webservices.security:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.core:kernel:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.flashlight:flashlight-framework:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.core:logging:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.core:api-exporter:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.web:web-glue:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.web:web-cli:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.common:amx-javaee:4.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.management.j2ee:javax.management.j2ee-api:1.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.common:amx-core:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.web:war-util:4.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet.jsp:javax.servlet.jsp-api:2.3.2-b01" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.web:web-naming:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.web:web-core:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.web:javax.servlet.jsp:2.3.3-b02" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish:javax.el:3.0.1-b08" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.admin:admin-core:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.web:web-gui-plugin-common:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.web:web-embed-api:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.web:gf-web-connector:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.web:web-sse:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.metro:webservices-osgi:2.3.1-b419" level="project" />
+    <orderEntry type="library" name="Maven: javax.xml.rpc:javax.xml.rpc-api:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.metro:webservices-extra-jdk-packages:2.3.1-b419" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.woodstox:woodstox-core-asl:4.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.woodstox:stax2-api:3.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.jvnet.mimepull:mimepull:1.9.4" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.security:websecurity:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.webservices:jsr109-impl:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.grizzly:grizzly-http-servlet:2.3.15-gfa" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.common:glassfish-naming:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.connectors:work-management:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.transaction:transaction-internal-api:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.gmbal:gmbal:4.0.0-b001" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.pfl:pfl-tf:4.0.0-b003" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.pfl:pfl-basic-tools:4.0.0-b003" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.pfl:pfl-tf-tools:4.0.0-b003" level="project" />
+    <orderEntry type="library" name="Maven: javax.security.auth.message:javax.security.auth.message-api:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.connectors:connectors-inbound-runtime:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.connectors:connectors-runtime:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.connectors:gf-connectors-connector:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.ejb:ejb-internal-api:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.orb:orb-connector:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.orb:orb-enabler:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.pfl:pfl-basic:4.0.0-b004" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.corba:glassfish-corba-omgapi:4.0.0-b008" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.corba:glassfish-corba-internal-api:4.0.0-b008" level="project" />
+    <orderEntry type="library" name="Maven: javax.el:javax.el-api:3.0.1-b03" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.admin:monitoring-core:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.webservices:webservices-connector:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.corba:glassfish-corba-orb:4.0.0-b008" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.corba:glassfish-corba-csiv2-idl:4.0.0-b008" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.corba:exception-annotation-processor:4.0.0-b008" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.felix:org.osgi.core:1.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.pfl:pfl-dynamic:4.0.0-b004" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.grizzly:grizzly-framework:2.2.10" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.gmbal:gmbal-api-only:3.0.0-b023" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.orb:orb-iiop:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.cluster:gms-bootstrap:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.shoal:shoal-gms-api:1.6.18" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.pfl:pfl-asm:4.0.0-b004" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.core:glassfish:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.common:simple-glassfish-api:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.appclient:acc-config:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.transaction:jts:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.transaction:jta:4.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.glassfish.main.jms:jms-core:4.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.glassfish.main.jms:gf-jms-connector:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.common:glassfish-mbeanserver:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.external:jmxremote_optional-repackaged:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.ejb:gf-ejb-connector:4.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: javax.jms:javax.jms-api:2.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.persistence:org.eclipse.persistence.core:2.5.2-RC1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.persistence:org.eclipse.persistence.jpa:2.5.2-RC1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.persistence:org.eclipse.persistence.jpa.jpql:2.5.2-RC1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.persistence:org.eclipse.persistence.jpa.modelgen.processor:2.5.2-RC1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.persistence:org.eclipse.persistence.moxy:2.5.2-RC1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.persistence:org.eclipse.persistence.dbws:2.5.2-RC1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.persistence:org.eclipse.persistence.oracle:2.5.2-RC1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.persistence:org.eclipse.persistence.antlr:2.5.2-RC1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.persistence:org.eclipse.persistence.asm:2.5.2-RC1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.persistence:jpa-container:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.persistence:persistence-common:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.deployment:deployment-javaee-core:4.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.glassfish.main.persistence.cmp:cmp-internal-api:4.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.annotation:javax.annotation-api:1.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:2.2.12-b140109.1041" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.xml.bind:jaxb-osgi:2.2.10-b140802.1033" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.sun.xml.bind:jaxb-extra-osgi:2.2.10-b140802.1033" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.metro:webservices-api-osgi:2.3.1-b419" level="project" />
+    <orderEntry type="library" name="Maven: javax.xml.registry:javax.xml.registry-api:1.0.5" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.glassfish.main.appclient.server:appclient-connector:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.resources:javamail-connector:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.resources:resources-connector:4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.main.resourcebase.resources:nucleus-resources:4.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.mail:javax.mail-api:1.5.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.glassfish.main.resources:javamail-runtime:4.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.interceptor:javax.interceptor-api:1.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.glassfish:javax.json:1.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.weld.se:weld-se-core:2.2.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.weld:weld-spi:2.2.SP2" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.weld:weld-api:2.2.SP2" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.1.3.GA" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.weld:weld-core-impl:2.2.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.classfilewriter:jboss-classfilewriter:1.0.4.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:13.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.spec.javax.el:jboss-el-api_3.0_spec:1.0.0.Alpha1" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.spec.javax.interceptor:jboss-interceptors-api_1.2_spec:1.0.0.Alpha3" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.Alpha1" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-all:2.1.8" level="project" />
+    <orderEntry type="library" name="Maven: javax.enterprise:cdi-api:1.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="module-library">
+      <library name="Maven: com.sun:tools-jar:1">
+        <CLASSES>
+          <root url="jar:///usr/lib/jvm/java-8-openjdk-amd64/lib/tools.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

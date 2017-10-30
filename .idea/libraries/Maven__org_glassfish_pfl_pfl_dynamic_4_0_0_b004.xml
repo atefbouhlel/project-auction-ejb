@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.glassfish.pfl:pfl-dynamic:4.0.0-b004">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/pfl/pfl-dynamic/4.0.0-b004/pfl-dynamic-4.0.0-b004.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/pfl/pfl-dynamic/4.0.0-b004/pfl-dynamic-4.0.0-b004-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/pfl/pfl-dynamic/4.0.0-b004/pfl-dynamic-4.0.0-b004-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

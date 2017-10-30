@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="project-auction-bean:ejb exploded">
+    <output-path>$PROJECT_DIR$/project-auction-bean/target/entity-bean</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="project-auction-bean/ejb/EJB" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/project-auction-bean/target/entity-bean/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="project-auction-bean" />
+    </root>
+  </artifact>
+</component>

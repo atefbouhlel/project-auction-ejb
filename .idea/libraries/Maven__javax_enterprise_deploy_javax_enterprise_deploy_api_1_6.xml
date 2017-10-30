@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: javax.enterprise.deploy:javax.enterprise.deploy-api:1.6">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/enterprise/deploy/javax.enterprise.deploy-api/1.6/javax.enterprise.deploy-api-1.6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/enterprise/deploy/javax.enterprise.deploy-api/1.6/javax.enterprise.deploy-api-1.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/enterprise/deploy/javax.enterprise.deploy-api/1.6/javax.enterprise.deploy-api-1.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

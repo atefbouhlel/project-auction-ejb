@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="project-auction-bean:ejb">
+    <output-path>$PROJECT_DIR$/project-auction-bean/target</output-path>
+    <root id="archive" name="entity-bean.jar">
+      <element id="artifact" artifact-name="project-auction-bean:ejb exploded" />
+    </root>
+  </artifact>
+</component>
