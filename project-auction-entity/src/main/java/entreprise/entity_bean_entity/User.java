@@ -69,4 +69,14 @@ public class User implements Serializable{
         this.adress = adress;
     }
 
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", pseudo='" + pseudo + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", email='" + email + '\'' +
+                ", adress='" + adress + '\'' +
+                '}';
+    }
 }
