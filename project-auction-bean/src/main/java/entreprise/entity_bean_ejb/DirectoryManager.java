@@ -7,8 +7,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+import javax.persistence.NoResultException;
+
 import entreprise.entity_bean_api.DirectoryManagerRemote;
 import entreprise.entity_bean_api.StatelessSession;
+import entreprise.entity_bean_entity.Objet;
 import entreprise.entity_bean_entity.User;
 
 /**
@@ -25,14 +28,22 @@ public class DirectoryManager implements DirectoryManagerRemote {
 
     @Override
     public String addUser(String userName) {
-        User u = new User();
-        u.setFirstname("fghjk");
-        u.setAdress("fghjk");
-        u.setEmail("fghjk");
-        u.setLastname("fghjk");
-        u.setPseudo("atef");
+        try {
+            User u = findUser(userName);
+            return "User already exists !!";
+        }
+        catch (NoResultException e) {
+            User u = new User();
+            u.setFirstname("fghjk");
+            u.setAdress("fghjk");
+            u.setEmail("fghjk");
+            u.setLastname("fghjk");
+            u.setPseudo(userName);
 
-        em.persist(u);
+            em.persist(u);
+
+        }
+
 
         return "ok user";
     }
@@ -59,5 +70,39 @@ public class DirectoryManager implements DirectoryManagerRemote {
         //System.out.println("Users successfuly selected!!");
         
 //        return users;
+    }
+
+    @Override
+
+    public Vector<Objet> getUserObjects(String pseudo) {
+        try {
+            User u = findUser(pseudo);
+            /*Query q = em.createQuery("select o from Objet o where o.user=:user");
+            q.setParameter("user", u);*/
+
+            try {
+//                System.out.println("****Objects list:");
+                return (Vector<Objet>) u.getObjects();
+                /*for (Objet o : u.getObjects()) {
+                    System.out.println("atef");
+                    System.out.println(o);
+                }*/
+            }
+            catch (NoResultException e){
+                System.out.println(u.getPseudo() + " has no objects !");
+                return null;
+            }
+        }
+        catch (NoResultException e){
+            System.out.println("User does not exist!!");
+            return null;
+        }
+    }
+
+    @Override
+    public void addObjectToUser(String pseudo, Objet obj){
+        User user = findUser(pseudo);
+        user.getObjects().add(obj);
+        obj.setUser(user);
     }
 }

@@ -2,6 +2,7 @@
 package entreprise.adminClient;
 
 import entreprise.entity_bean_api.DirectoryManagerRemote;
+import entreprise.entity_bean_entity.Objet;
 import entreprise.entity_bean_entity.User;
 
 import javax.naming.InitialContext;
@@ -30,8 +31,8 @@ public class AdministrationClient {
 					System.out.println("1. Add user");
 					System.out.println("2. Remove user");
 					System.out.println("3. Lookup all users");
-					System.out.println("4. Lookup a user rights");
-					System.out.println("5. Update a user rights");
+					System.out.println("4. Lookup a user objects");
+					System.out.println("5. add a new object to a user");
 					System.out.println("0. Quit");
 					System.out.print("Your choice: ");
 
@@ -43,7 +44,7 @@ public class AdministrationClient {
 							System.out.print("Enter username to add: ");
 							/*Scanner in1 = new Scanner(System.in);
 							String userName1 = in1.nextLine();*/
-							sb.addUser("ghjk");
+							System.out.println(sb.addUser("atef"));
 							break;
 
 						case 2:
@@ -62,19 +63,35 @@ public class AdministrationClient {
 							break;
 
 						case 4:
-							System.out.print("Enter username: ");
-							/*Scanner in3 = new Scanner(System.in);
-							String userName4 = in3.nextLine();
-							dm.lookupAUserRights(userName4);*/
+							System.out.print("Enter pseudo: ");
+							Scanner in3 = new Scanner(System.in);
+							String pseudo = in3.nextLine();
+							Vector<Objet> objects = sb.getUserObjects(pseudo);
+							System.out.println("****Objects list:*********");
+
+							for (Objet o : objects) {
+								System.out.println(o);
+							}
+
 							break;
 
 						case 5:
-							System.out.print("Enter username: ");
-//							Scanner in5 = new Scanner(System.in);
-//							String userName5 = in5.nextLine();
-//							System.out.println("Enter his new rights (rw, r, w or no_rights)");
-//							Scanner in6 = new Scanner(System.in);
-//							String rights = in6.nextLine();
+							System.out.print("Enter a pseudo: ");
+							Scanner in5 = new Scanner(System.in);
+							String pseudo5 = in5.nextLine();
+							System.out.println("Enter the details of the new object:");
+							System.out.print("Name:");
+							System.out.println("\n");
+							Scanner in6 = new Scanner(System.in);
+							String objectName = in6.nextLine();
+
+							Objet newObject = new Objet();
+							newObject.setName(objectName);
+							newObject.setDescription("ghjkltyuio");
+							newObject.setCategory("catfghjkl");
+
+							sb.addObjectToUser(pseudo5, newObject);
+
 //							if (rights.equals("rw")) dm.updateAUserRights(userName5, true, true);
 //							else if (rights.equals("r")) dm.updateAUserRights(userName5, true, false);
 //							else if (rights.equals("w")) dm.updateAUserRights(userName5, false, true);

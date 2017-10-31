@@ -2,16 +2,29 @@ package entreprise.entity_bean_entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
+import java.util.ArrayList;
+
+import static javax.persistence.CascadeType.ALL;
+import static javax.persistence.FetchType.EAGER;
 
 @Entity
 @Table(name = "users")
 public class User implements Serializable{
+    private static final long serialVersionUID = 1789635L;
+
     private int id;
     private String pseudo;
     private String firstname;
     private String lastname;
     private String email;
     private String adress;
+    /**
+     * the collection of orders.
+     */
+	private Collection<Objet> objects = new ArrayList<Objet>();
+
+
 
     @Id
     @Column(name = "USER_ID")
@@ -67,6 +80,15 @@ public class User implements Serializable{
 
     public void setAdress(String adress) {
         this.adress = adress;
+    }
+
+    @OneToMany(cascade = ALL, fetch=EAGER, mappedBy = "user")
+    public Collection<Objet> getObjects() {
+        return objects;
+    }
+
+    public void setObjects(Collection<Objet> objects) {
+        this.objects = objects;
     }
 
     public String toString() {
