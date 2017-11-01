@@ -108,7 +108,7 @@ public class AdministrationClient {
 					}
 
 				} while (!exit);
-			System.out.println("Test... " + sb.addUser("atef"));
+			//System.out.println("Test... " + sb.addUser("atef"));
 
 
 		} catch(Exception e) {

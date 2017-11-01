@@ -20,9 +20,11 @@ public class User implements Serializable{
     private String email;
     private String adress;
     /**
-     * the collection of orders.
+     * the collection of objects.
      */
 	private Collection<Objet> objects = new ArrayList<Objet>();
+
+	private Collection<Auction> auctions = new ArrayList<Auction>();
 
 
 
@@ -89,6 +91,15 @@ public class User implements Serializable{
 
     public void setObjects(Collection<Objet> objects) {
         this.objects = objects;
+    }
+
+    @OneToMany(cascade = ALL, fetch=EAGER, mappedBy = "user")
+    public Collection<Auction> getAuctions() {
+        return auctions;
+    }
+
+    public void setAuctions(Collection<Auction> auctions) {
+        this.auctions = auctions;
     }
 
     public String toString() {
