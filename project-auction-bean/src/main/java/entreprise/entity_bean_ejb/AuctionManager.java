@@ -3,6 +3,7 @@ package entreprise.entity_bean_ejb;
 import entreprise.entity_bean_api.AuctionManagerRemote;
 import entreprise.entity_bean_api.DirectoryManagerRemote;
 import entreprise.entity_bean_entity.Auction;
+import entreprise.entity_bean_entity.Objet;
 import entreprise.entity_bean_entity.User;
 
 import javax.ejb.Stateless;
@@ -16,7 +17,7 @@ import java.util.Vector;
 import javax.naming.InitialContext;
 
 @Stateless
-public class AuctionManger implements AuctionManagerRemote {
+public class AuctionManager implements AuctionManagerRemote {
 
     @PersistenceContext(unitName = "pu1")
     private EntityManager em;
@@ -45,20 +46,45 @@ public class AuctionManger implements AuctionManagerRemote {
     }
 
     @Override
-    public String startAuction(User user, Auction auction) {
+    public Vector<Objet> getUserObjectsForAuction(String pseudo){
+        Vector<Objet> objects = null;
+        try {
+            InitialContext ic = new InitialContext();
+            DirectoryManagerRemote dm = (DirectoryManagerRemote) ic.lookup("entreprise.entity_bean_api.DirectoryManagerRemote");
+            objects = dm.getUserObjects(pseudo);
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+
+        return objects;
+    }
+
+    @Override
+    public String startAuction(Auction auction, String pseudo, int objectId) {
         Query q = em.createQuery("select u from User u where u.pseudo = :name");
-        q.setParameter("name", user.getPseudo());
+        q.setParameter("name", pseudo);
         User u = (User) q.getSingleResult();
 
+        Query q2 = em.createQuery("select o from Objet o where o.id = :id");
+        q2.setParameter("id", objectId);
+        Objet obj = (Objet) q2.getSingleResult();
+        if (obj == null)
+            return "This object's id does not exist";
 
         u.getAuctions().add(auction);
         auction.setUser(u);
-        return "startAuction ok..\n";
+        auction.setObject(obj);
+
+        return "Auction is started..\n";
     }
 
     @Override
     public String closeAuction(int auctionId){
         Auction auction = findAuction(auctionId);
+        if (auction == null)
+            return "The chosen auction does not exist !";
+
         auction.setState("close");
 
         return "Auction succesfully close";

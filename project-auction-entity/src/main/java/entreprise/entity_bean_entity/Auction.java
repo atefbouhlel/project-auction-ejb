@@ -18,6 +18,7 @@ public class Auction implements Serializable{
     private String state;
 
     private User user;
+    private Objet object;
 
 
     @Id
@@ -86,17 +87,28 @@ public class Auction implements Serializable{
         this.user = user;
     }
 
+    @OneToOne
+    public Objet getObject() {
+        return object;
+    }
+
+    public void setObject(Objet object) {
+        this.object = object;
+    }
 
     @Override
     public String toString() {
-        return id + ". "+ name;
-        /*return "Auction{" +
+        return "Auction{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", startPrice=" + startPrice +
                 ", finalPrice=" + finalPrice +
                 ", duration=" + duration +
+                ", state='" + state + '\'' +
                 ", user=" + user +
-                '}';*/
+                ", object=" + object +
+                '}';
     }
+
+
 }

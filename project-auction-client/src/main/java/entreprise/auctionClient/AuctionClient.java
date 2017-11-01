@@ -61,16 +61,21 @@ public class AuctionClient {
 
 						case 1:
 							System.out.print("Enter the object's ID you want to sell: ");
+							Vector<Objet> objects = amc.getUserObjectsForAuction(activeUser.getPseudo());
+							System.out.println("******the auctions list:");
+							for (Objet object : objects) {
+								System.out.println(object.getId() + ". " +object.getName());
+							}
 
-							/*Scanner in1 = new Scanner(System.in);
-							String userName1 = in1.nextLine();*/
+							Scanner in1 = new Scanner(System.in);
+							int objectId = in1.nextInt();
 
 							Auction auction1 = new Auction();
 							auction1.setName("Auction Test");
 							auction1.setStartPrice(10.0);
 							auction1.setDuration(60);
 							auction1.setState("active");
-							System.out.println(amc.startAuction(activeUser, auction1));
+							System.out.println(amc.startAuction(auction1, activeUser.getPseudo(), objectId));
 
 							break;
 
@@ -79,7 +84,7 @@ public class AuctionClient {
 							Vector<Auction> auctions = amc.lookupAllOpenAuctions();
 							System.out.println("******the auctions list:");
 							for (Auction auction : auctions) {
-								System.out.println(auction);
+								System.out.println(auction.getId() + ". "+ auction.getName());
 							}
 
 							System.out.print("Type the auction's id to close: ");

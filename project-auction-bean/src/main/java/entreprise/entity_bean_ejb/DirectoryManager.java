@@ -46,7 +46,7 @@ public class DirectoryManager implements DirectoryManagerRemote {
         }
 
 
-        return "ok user";
+        return "User is successfully added !";
     }
 
     @Override
@@ -64,17 +64,11 @@ public class DirectoryManager implements DirectoryManagerRemote {
 
     @Override
     public Vector<User> lookupAllUsers() {
-//        Vector<User> users = new Vector<User>();
-
         Query q = em.createQuery("select u from User u");
         return (Vector<User>) q.getResultList();
-        //System.out.println("Users successfuly selected!!");
-        
-//        return users;
     }
 
     @Override
-
     public Vector<Objet> getUserObjects(String pseudo) {
         try {
             User u = findUser(pseudo);
