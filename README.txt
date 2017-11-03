@@ -1,12 +1,10 @@
-Manuel d’utilisation
+
 Pour utiliser le système des enchères, il y a deux façons :
 • Démo automatique : lancer le client AutomatedDemoClient qui fait tous les opérations
 possibles
 • Mode Interactif : lancer un client AdministrationClient (pseudo : admin) et faire les
 opérations possibles et plusieurs AuctionClient pour tester le reste des opérations
-63.3 L’application
-3.2.1
-7
+
 Méthode 1 (Démo automatique)
 Pour lancer la démo il faut exécuter plusieurs commandes, après la décompression du projet
 zippé :
@@ -17,8 +15,10 @@ bean/target/entity-bean.jar
 • (cd project-auction-client/ ; java -classpath $CLASSPATH :../project-auction-bean/target/entity-
 bean.jar :target/project-auction-client-4.0-SNAPSHOT.jar entreprise/demoClient/Automated
 DemoClient)
-3.2.2
+
+
 Méthode 2 (Mode Interactif)
+
 Pour lancer le mode interactif, il faut lancer le AdministrationClient dans un terminal et
 taper "admin" comme pseudo d’authentification et lancer plusieurs auctions en s’authentifiant
 avec les utilisateurs créés dans le premier terminal.
