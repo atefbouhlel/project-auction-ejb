@@ -20,11 +20,17 @@ public class User implements Serializable{
     private String email;
     private String adress;
     /**
+     * 0 == Admin or 1 == User
+     */
+    private int role;
+    /**
      * the collection of objects.
      */
 	private Collection<Objet> objects = new ArrayList<Objet>();
 
 	private Collection<Auction> auctions = new ArrayList<Auction>();
+
+	private Collection<Auction> winnigAuctions = new ArrayList<Auction>();
 
 
 
@@ -84,6 +90,15 @@ public class User implements Serializable{
         this.adress = adress;
     }
 
+    @Column(name = "ROLE")
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
+    }
+
     @OneToMany(cascade = ALL, fetch=EAGER, mappedBy = "user")
     public Collection<Objet> getObjects() {
         return objects;
@@ -93,13 +108,22 @@ public class User implements Serializable{
         this.objects = objects;
     }
 
-    @OneToMany(cascade = ALL, fetch=EAGER, mappedBy = "user")
+    @OneToMany(cascade = ALL, fetch=EAGER, mappedBy = "vendor")
     public Collection<Auction> getAuctions() {
         return auctions;
     }
 
     public void setAuctions(Collection<Auction> auctions) {
         this.auctions = auctions;
+    }
+
+    @OneToMany(cascade = ALL, fetch=EAGER, mappedBy = "buyer")
+    public Collection<Auction> getWinnigAuctions() {
+        return winnigAuctions;
+    }
+
+    public void setWinnigAuctions(Collection<Auction> winnigAuctions) {
+        this.winnigAuctions = winnigAuctions;
     }
 
     public String toString() {

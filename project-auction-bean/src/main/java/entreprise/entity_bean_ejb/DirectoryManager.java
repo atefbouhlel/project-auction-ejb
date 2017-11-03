@@ -28,76 +28,119 @@ public class DirectoryManager implements DirectoryManagerRemote {
     private EntityManager em;
 
     @Override
-    public String addUser(String userName) {
-        try {
-            User u = findUser(userName);
-            return "User already exists !!";
-        }
-        catch (NoResultException e) {
-            User u = new User();
-            u.setFirstname("fghjk");
-            u.setAdress("fghjk");
-            u.setEmail("fghjk");
-            u.setLastname("fghjk");
-            u.setPseudo(userName);
+    public String addUser(String pseudo) {
+            User u;
+            u = findUser(pseudo);
+
+            if (u != null)
+                return "User already exists !!";
+
+            u = new User();
+            u.setFirstname(pseudo + "_FirstName");
+            u.setAdress(pseudo + "_Address");
+            u.setEmail(pseudo + "@hotmail.com");
+            u.setLastname(pseudo+ "_LastName");
+            u.setPseudo(pseudo);
 
             em.persist(u);
 
-        }
 
 
-        return "User is successfully added !";
+
+        return pseudo + " is successfully added !";
     }
 
     @Override
-    public User findUser(final String name) {
-        Query q = em.createQuery("select u from User u where u.pseudo = :name");
-        q.setParameter("name", name);
-        return (User) q.getSingleResult();
-    }
-
-    @Override
-    public void removeUser(String userName) {
-        User u = findUser(userName);
-        em.remove(u);
-    }
-
-    @Override
-    public Vector<User> lookupAllUsers() {
-        Query q = em.createQuery("select u from User u");
-        return (Vector<User>) q.getResultList();
-    }
-
-    @Override
-    public Vector<Objet> getUserObjects(String pseudo) {
-        try {
-            User u = findUser(pseudo);
-            /*Query q = em.createQuery("select o from Objet o where o.user=:user");
-            q.setParameter("user", u);*/
-
-            try {
-//                System.out.println("****Objects list:");
-                return (Vector<Objet>) u.getObjects();
-                /*for (Objet o : u.getObjects()) {
-                    System.out.println("atef");
-                    System.out.println(o);
-                }*/
-            }
-            catch (NoResultException e){
-                System.out.println(u.getPseudo() + " has no objects !");
-                return null;
-            }
-        }
-        catch (NoResultException e){
-            System.out.println("User does not exist!!");
+    public User findUser(String name) {
+        try{
+            Query q = em.createQuery("select u from User u where u.pseudo = :name");
+            q.setParameter("name", name);
+            return (User) q.getSingleResult();
+        }catch (NoResultException e) {
             return null;
         }
     }
 
     @Override
-    public void addObjectToUser(String pseudo, Objet obj){
+    public void removeUser(String userName) {
+        User u = findUser(userName);
+        if (u != null)
+            em.remove(u);
+    }
+
+    @Override
+    public Vector<User> lookupAllUsers() {
+        Query q = em.createQuery("select u from User u where u.role = :role");
+        q.setParameter("role", 1);
+        return (Vector<User>) q.getResultList();
+    }
+
+    @Override
+    public Vector<Objet> getUserObjects(String pseudo) {
+
+            User u = findUser(pseudo);
+            if (u != null) {
+
+                try {
+//                System.out.println("****Objects list:");
+                    return (Vector<Objet>) u.getObjects();
+                /*for (Objet o : u.getObjects()) {
+                    System.out.println("atef");
+                    System.out.println(o);
+                }*/
+                } catch (NoResultException e) {
+                    System.out.println(u.getPseudo() + " has no objects !");
+                    return null;
+                }
+            }
+            return null;
+
+    }
+
+    @Override
+    public String addObjectToUser(String pseudo, Objet obj){
         User user = findUser(pseudo);
-        user.getObjects().add(obj);
-        obj.setUser(user);
+
+        if (user != null) {
+            user.getObjects().add(obj);
+            obj.setUser(user);
+
+            return obj.getName() + "is added successfully !";
+        }
+
+        return "User does not exist!!";
+    }
+
+    @Override
+    public void createAdmin() {
+        User u = findUser("admin");
+        if (u == null) {
+            u = new User();
+            u.setFirstname("Admin");
+            u.setAdress("Admin_Address");
+            u.setEmail("admin@hotmail.com");
+            u.setLastname("Admin_LastName");
+            u.setPseudo("admin");
+            u.setRole(0);
+
+            em.persist(u);
+        }
+
+
+
+    }
+
+    @Override
+    public boolean checkAdmin(String pseudo){
+
+        try{
+            Query q = em.createQuery("select u from User u where u.pseudo = :name and u.role = :role");
+            q.setParameter("name", pseudo);
+            q.setParameter("role", 0);
+            User u = (User) q.getSingleResult();
+            return true;
+        }catch (NoResultException e) {
+            return false;
+        }
     }
 }

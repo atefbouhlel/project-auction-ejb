@@ -12,12 +12,23 @@ import javax.ejb.Remote;
 public interface DirectoryManagerRemote {
 
     public String addUser(String userName);
-    public User findUser(final String name);
+    public User findUser(String name);
     public void removeUser(String userName);
     public Vector<User> lookupAllUsers();
 
     public Vector<Objet> getUserObjects(String pseudo);
-    public void addObjectToUser(String pseudo, Objet obj);
-    //public NewsGroupRight lookupAUserRights(String userName);
-    //public void updateAUserRights(String userName, boolean readRight, boolean writeRight);
+    public String addObjectToUser(String pseudo, Objet obj);
+
+    /**
+    * This method creates the Admin User to test the admin Client
+     */
+    public void createAdmin();
+
+    /**
+    * This method checks if the pseudo is Admin or not
+    * @param pseudo the string of the pseudo to check
+     * @return true or false
+     */
+    public boolean checkAdmin(String pseudo);
+
 }

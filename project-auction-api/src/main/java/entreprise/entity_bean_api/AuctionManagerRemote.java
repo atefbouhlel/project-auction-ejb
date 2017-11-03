@@ -11,15 +11,26 @@ import javax.ejb.Remote;
 @Remote
 public interface AuctionManagerRemote {
 
-    public  User authenticateUser(String pseudo);
+//    public  User authenticateUser(String pseudo);
+    public  boolean authenticate(String pseudo);
 
-    public String startAuction(Auction auction, String pseudo, int objectId);
+    public String startAuction(Auction auction, int objectId);
 
     public Vector<Auction> lookupAllAuctions();
 
     public Vector<Auction> lookupAllOpenAuctions();
+
     public Auction findAuction(int auctionId);
     public String closeAuction(int auctionId);
 
     public Vector<Objet> getUserObjectsForAuction(String pseudo);
+    public Vector<Objet> getMyObjectsForAuction();
+
+    public String getAuctionDetailsForBid(int auctionId);
+
+    public String sendBid(int auctionId);
+
+    public String addObject(Objet obj);
+
+    public boolean checkRight();
 }

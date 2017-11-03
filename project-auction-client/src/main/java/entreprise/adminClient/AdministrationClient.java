@@ -16,6 +16,21 @@ public class AdministrationClient {
 			InitialContext ic = new InitialContext();
 			sb = (DirectoryManagerRemote) ic.lookup("entreprise.entity_bean_api.DirectoryManagerRemote");
 
+			//This creation of the admin is done only for the test
+				sb.createAdmin();
+
+				boolean found = false;
+
+				do {
+					Scanner inUser = new Scanner(System.in);
+					System.out.println("Type your admin's pseudo:");
+					String pseudo = inUser.nextLine();
+
+					found = sb.checkAdmin(pseudo);
+					if (found == false)
+						System.out.println("Not Found !");
+				}while (found == false);
+
 				Scanner in = new Scanner(System.in);
 
 				boolean exit = false;
@@ -31,8 +46,8 @@ public class AdministrationClient {
 					System.out.println("1. Add user");
 					System.out.println("2. Remove user");
 					System.out.println("3. Lookup all users");
-					System.out.println("4. Lookup a user objects");
-					System.out.println("5. add a new object to a user");
+					System.out.println("4. add a new object to a user");
+					System.out.println("5. Lookup a user objects");
 					System.out.println("0. Quit");
 					System.out.print("Your choice: ");
 
@@ -42,9 +57,9 @@ public class AdministrationClient {
 
 						case 1:
 							System.out.print("Enter username to add: ");
-							/*Scanner in1 = new Scanner(System.in);
-							String userName1 = in1.nextLine();*/
-							System.out.println(sb.addUser("atef"));
+							Scanner in1 = new Scanner(System.in);
+							String userName1 = in1.nextLine();
+							System.out.println(sb.addUser(userName1));
 							break;
 
 						case 2:
@@ -63,40 +78,64 @@ public class AdministrationClient {
 							break;
 
 						case 4:
-							System.out.print("Enter pseudo: ");
-							Scanner in3 = new Scanner(System.in);
-							String pseudo = in3.nextLine();
-							Vector<Objet> objects = sb.getUserObjects(pseudo);
-							System.out.println("****Objects list:*********");
-
-							for (Objet o : objects) {
-								System.out.println(o);
+							User foundUser = null;
+							String pseudo5 = "";
+							Vector<User> usersList = sb.lookupAllUsers();
+							System.out.println("***Here's the user's list:");
+							for (User user : usersList) {
+								System.out.println(user);
 							}
 
+								System.out.print("Enter a pseudo: ");
+								Scanner in5 = new Scanner(System.in);
+								pseudo5 = in5.nextLine();
+
+								foundUser = sb.findUser(pseudo5);
+								if (foundUser == null)
+									System.out.println("This user does not exist");
+							else {
+
+
+									System.out.println("Enter the details of the new object:");
+									System.out.print("Name:");
+									Scanner in6 = new Scanner(System.in);
+									String objectName = in6.nextLine();
+
+									Objet newObject = new Objet();
+									newObject.setName(objectName);
+									newObject.setDescription(objectName + "_Description");
+									newObject.setCategory(objectName + "_Category");
+
+									System.out.println(sb.addObjectToUser(pseudo5, newObject));
+								}
 							break;
 
 						case 5:
-							System.out.print("Enter a pseudo: ");
-							Scanner in5 = new Scanner(System.in);
-							String pseudo5 = in5.nextLine();
-							System.out.println("Enter the details of the new object:");
-							System.out.print("Name:");
-							System.out.println("\n");
-							Scanner in6 = new Scanner(System.in);
-							String objectName = in6.nextLine();
+							User foundUser5 = null;
 
-							Objet newObject = new Objet();
-							newObject.setName(objectName);
-							newObject.setDescription("ghjkltyuio");
-							newObject.setCategory("catfghjkl");
+							Vector<User> usersList2 = sb.lookupAllUsers();
+							System.out.println("***Here's the user's list:");
+							for (User user : usersList2) {
+								System.out.println(user);
+							}
 
-							sb.addObjectToUser(pseudo5, newObject);
+							System.out.println("Enter pseudo: ");
+							Scanner in3 = new Scanner(System.in);
+							String pseudo = in3.nextLine();
 
-//							if (rights.equals("rw")) dm.updateAUserRights(userName5, true, true);
-//							else if (rights.equals("r")) dm.updateAUserRights(userName5, true, false);
-//							else if (rights.equals("w")) dm.updateAUserRights(userName5, false, true);
-//							else if (rights.equals("no_rights")) dm.updateAUserRights(userName5, false, false);
-//							else System.out.println("Not a valid entry. Operation cancelled!");
+							foundUser5 = sb.findUser(pseudo);
+							if (foundUser5 == null)
+								System.out.println("This user does not exist");
+							else {
+
+
+								Vector<Objet> objects = sb.getUserObjects(pseudo);
+								System.out.println("****Objects list:*********");
+
+								for (Objet o : objects) {
+									System.out.println(o);
+								}
+							}
 							break;
 
 						case 0:
@@ -108,7 +147,6 @@ public class AdministrationClient {
 					}
 
 				} while (!exit);
-			//System.out.println("Test... " + sb.addUser("atef"));
 
 
 		} catch(Exception e) {

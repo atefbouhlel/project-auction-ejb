@@ -71,7 +71,6 @@ public class Objet implements Serializable{
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", category='" + category + '\'' +
-                ", user=" + user +
                 '}';
     }
 }

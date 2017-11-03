@@ -14,10 +14,13 @@ public class Auction implements Serializable{
     private String name;
     private double startPrice;
     private double finalPrice;
+    private double autoIncrement;
+
     private int duration;
     private String state;
 
-    private User user;
+    private User vendor;
+    private User buyer;
     private Objet object;
 
 
@@ -77,14 +80,33 @@ public class Auction implements Serializable{
         this.state = state;
     }
 
-    @ManyToOne()
-    @JoinColumn(name = "USER_ID")
-    public User getUser() {
-        return user;
+    @Column(name = "AUTO_INCREMENT")
+    public double getAutoIncrement() {
+        return autoIncrement;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setAutoIncrement(double autoIncrement) {
+        this.autoIncrement = autoIncrement;
+    }
+
+    @ManyToOne()
+    @JoinColumn(name = "VENDOR_ID")
+    public User getVendor() {
+        return vendor;
+    }
+
+    public void setVendor(User vendor) {
+        this.vendor = vendor;
+    }
+
+    @ManyToOne()
+    @JoinColumn(name = "BUYER_ID")
+    public User getBuyer() {
+        return buyer;
+    }
+
+    public void setBuyer(User buyer) {
+        this.buyer = buyer;
     }
 
     @OneToOne
@@ -105,7 +127,6 @@ public class Auction implements Serializable{
                 ", finalPrice=" + finalPrice +
                 ", duration=" + duration +
                 ", state='" + state + '\'' +
-                ", user=" + user +
                 ", object=" + object +
                 '}';
     }
